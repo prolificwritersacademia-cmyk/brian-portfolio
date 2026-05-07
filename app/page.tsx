@@ -22,35 +22,74 @@ export default function Home() {
       <main className="bg-slate-950 text-white min-h-screen scroll-smooth">
 
         {/* HERO */}
-        <section className="px-6 py-24 text-center">
-          <h1 className="text-5xl md:text-7xl font-black mb-6">
-            Brian Onchuru Omaanya
-          </h1>
+        {/* HERO */}
+<section className="px-6 py-24 md:py-32">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
 
-          <p className="text-slate-300 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-  Agricultural Engineer specializing in water systems, irrigation engineering, climate-smart agriculture, wastewater treatment, and sustainable infrastructure development. Passionate about leveraging engineering solutions to enhance agricultural productivity, promote sustainable water management, and drive innovation in the agricultural sector.
-</p>
+    {/* LEFT SIDE */}
+    <div>
+      <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm mb-4">
+        Graduate Engineer of the Year 2026
+      </p>
 
-          <div className="mt-8 flex justify-center gap-4">
-            <button
-              onClick={() =>
-                document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
-            >
-              View Projects
-            </button>
+      <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+        Brian Onchuru Omaanya
+      </h1>
 
-            <button
-              onClick={() =>
-                document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })
-              }
-              className="border border-cyan-400 px-6 py-3 rounded-xl hover:bg-cyan-400 hover:text-black transition"
-            >
-              Contact Me
-            </button>
-          </div>
-        </section>
+      <p className="text-slate-300 text-lg leading-relaxed mb-8">
+        Agricultural Engineer specializing in irrigation systems,
+        wastewater treatment, climate-smart agriculture,
+        renewable energy, and sustainable infrastructure development.
+      </p>
+
+      <div className="flex flex-wrap gap-4">
+
+        <button
+          onClick={() =>
+            document.getElementById("projects")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+          className="bg-cyan-500 text-black px-6 py-3 rounded-xl font-semibold hover:scale-105 transition"
+        >
+          View Projects
+        </button>
+
+        <button
+          onClick={() =>
+            document.getElementById("contact")?.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+          className="border border-cyan-400 px-6 py-3 rounded-xl hover:bg-cyan-400 hover:text-black transition"
+        >
+          Contact Me
+        </button>
+
+      </div>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="flex justify-center">
+      <div className="bg-slate-900 border border-slate-800 rounded-3xl p-10 w-full max-w-md shadow-2xl">
+
+        <div className="w-36 h-36 rounded-full bg-gradient-to-br from-cyan-400 to-blue-600 mx-auto mb-6 flex items-center justify-center text-5xl font-black text-black">
+          BO
+        </div>
+
+        <h2 className="text-2xl font-bold text-center mb-4">
+          Graduate Engineer of the Year 2026
+        </h2>
+
+        <p className="text-slate-300 text-center leading-relaxed">
+          Winner at EPC 2026 under the Engineering Recognition and Excellence Awards organized by the Engineers Board of Kenya.
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
         {/* ABOUT */}
         <section id="contact" className="px-6 py-20 text-center">
@@ -107,7 +146,39 @@ export default function Home() {
 
           </div>
         </section>
+{/* SKILLS */}
+<section className="px-6 py-20 bg-slate-900/50">
+  <div className="max-w-6xl mx-auto">
 
+    <h2 className="text-4xl font-bold mb-12 text-cyan-400 text-center">
+      Skills & Expertise
+    </h2>
+
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+      {[
+        "Irrigation Engineering",
+        "Water Systems",
+        "Wastewater Treatment",
+        "Climate-Smart Agriculture",
+        "Renewable Energy",
+        "Sustainable Land Management",
+        "Hydraulic Systems",
+        "Engineering Innovation",
+      ].map((skill) => (
+        <div
+          key={skill}
+          className="bg-slate-800 border border-slate-700 rounded-2xl p-6 text-center hover:border-cyan-400 hover:scale-105 transition duration-300"
+        >
+          <p className="font-semibold text-slate-200">
+            {skill}
+          </p>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
         {/* CONTACT */}
         <section id="contact" className="px-6 py-20 text-center">
           <h2 className="text-3xl font-bold text-cyan-400 mb-6">
